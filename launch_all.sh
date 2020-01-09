@@ -1,21 +1,25 @@
 # Go to project folder
-cd "/media/stephane/DATA/ESILV/A5/Dev Apps et Web services pour l'IOT/TP/Fichiers TP/"
+# cd "/media/stephane/DATA/ESILV/A5/Dev Apps et Web services pour l'IOT/TP/Fichiers TP/"
 pwd
 ls
 
 # delete all containers
-echo "removing all containers"
+printf "\n\nRemoving all containers\n"
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 
 # Re-aunching all containers
-echo "relaunching all containers"
-docker-compose -f ./rabbitmq/docker-compose-rabbitmq.yml up -d
-docker-compose -f ./mock\ data/docker-compose-mock-data.yml up
-docker-compose -f ./mongodb/docker-compose-mongodb.yml up -d
+printf "\n\nRelaunching all containers\n"
+docker-compose -f rabbitmq/docker-compose-rabbitmq.yml up -d
+docker-compose -f mock\ data/docker-compose-mock-data.yml up
+docker-compose -f mongodb/docker-compose-mongodb.yml up -d
+
+# Re-launching all the configuration scripts
+printf "\n\nRe-launching all the configuration scripts\n"
+sh rabbitmq/rabbitmq-generate-config.sh
 
 # Launching data geneation scripts
-echo "Launching data geneation scripts"
+printf "\n\nLaunching data geneation scripts\n"
 python3 ./rabbitmq/generate_data.py
 
 
