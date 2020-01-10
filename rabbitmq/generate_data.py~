@@ -1,0 +1,184 @@
+import pika
+import random
+import json
+
+'''
+    Function to connect to rabbitmq
+'''
+def rabbitmq_connection(adress = "localhost", port = 5672, vhost = "Client1", user = "rabbitmq", pswd = 'rabbitmq'):
+    credentials = pika.PlainCredentials(user, pswd)
+    parameters = pika.ConnectionParameters(adress,
+                                           port,
+                                           vhost,
+                                           credentials)
+
+    connection = pika.BlockingConnection(parameters)
+    channel = connection.channel()
+    return channel, connection
+
+'''
+    Function to post a message on an eschange
+'''
+def pub_msg(channel, exchange= "Client1-Maison1", routing_key = "", msg='Hello World!'):
+    channel.basic_publish(exchange=exchange,
+                          routing_key=routing_key,
+                          body=msg)
+
+'''
+    MAIN GENERATION CODE
+'''
+
+
+# Generating data
+client1_data = {
+    "Entree": [
+        {
+            "sensor_name": None,
+            "sensor_type": "OuverturePorteEntree",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Ampoule",
+            "generated_data": []
+        }
+    ],
+    "Salon": [
+        {
+            "sensor_name": None,
+            "sensor_type": "OuverturePorteFenetre",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "OuverturePorteFenetre",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Ampoule",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Ampoule",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Presence",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Temperature",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Chauffage",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Chauffage",
+            "generated_data": []
+        }
+    ],
+    "Chambre": [
+        {
+            "sensor_name": None,
+            "sensor_type": "OuverturePorteFenetre",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "OuverturePorteFenetre",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Ampoule",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Presence",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Temperature",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Chauffage",
+            "generated_data": []
+        }
+    ],
+    "Cuisine": [
+        {
+            "sensor_name": None,
+            "sensor_type": "Presence",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Temperature",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "Chauffage",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "PriseElec",
+            "generated_data": []
+        },
+        {
+            "sensor_name": None,
+            "sensor_type": "PuissanceCapt",
+            "generated_data": []
+        }
+    ]
+}
+
+tmp_sensor_names_counters = {}
+
+# Set all names and generate data
+for room in client1_data:
+    room_sensors = client1_data[room]
+    
+    for sensor_idx, sensor in enumerate(room_sensors, start=0):
+
+        sensor_type = sensor["sensor_type"]
+
+        if not sensor_type in tmp_sensor_names_counters:
+            tmp_sensor_names_counters[sensor_type] = 0
+        
+        sensor_name = sensor_type + str(tmp_sensor_names_counters[sensor_type])
+        tmp_sensor_names_counters[sensor_type]+=1
+        
+        client1_data[room][sensor_idx]["sensor_name"] = sensor_name
+
+        print (tmp_sensor_names_counters)
+
+
+'''print("Random float number is ", random.uniform(-10.0, 35.0))
+print("Random float number is ", random.uniform(-10.0, 35.0))
+print("Random float number is ", random.uniform(-10.0, 35.0))'''
+
+print(json.dumps(client1_data, indent=4, sort_keys=True))
+
+
+# Connecting to rabbitmq
+channel, connection = rabbitmq_connection()
+
+# Publishing messages
+# pub_msg(channel, msg='Hello World!')
+
+# Disconnecting from Rabbitmq
+connection.close()

@@ -1,0 +1,1116 @@
+{
+    "Client1": {
+        "Chambre": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre2",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre2",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre2",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre2",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "OuverturePorteFenetre2",
+                "sensor_type": "OuverturePorteFenetre"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre3",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre3",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre3",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre3",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "OuverturePorteFenetre3",
+                "sensor_type": "OuverturePorteFenetre"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule3",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule3",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule3",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule3",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "Ampoule3",
+                "sensor_type": "Ampoule"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence1",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "Presence1",
+                "sensor_type": "Presence"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature1",
+                        "ValeurCapture": 2.4653407211615104
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature1",
+                        "ValeurCapture": 11.492083550082558
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature1",
+                        "ValeurCapture": 7.397063949687077
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature1",
+                        "ValeurCapture": 8.26732242274496
+                    }
+                ],
+                "sensor_name": "Temperature1",
+                "sensor_type": "Temperature"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage2",
+                        "ValeurCapture": "Arret"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage2",
+                        "ValeurCapture": "Arret"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage2",
+                        "ValeurCapture": "Arret"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage2",
+                        "ValeurCapture": "Arret"
+                    }
+                ],
+                "sensor_name": "Chauffage2",
+                "sensor_type": "Chauffage"
+            }
+        ],
+        "Cuisine": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence2",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence2",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence2",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence2",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "Presence2",
+                "sensor_type": "Presence"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature2",
+                        "ValeurCapture": 5.609883382935736
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature2",
+                        "ValeurCapture": 28.35679317855425
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature2",
+                        "ValeurCapture": 10.447610660673838
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature2",
+                        "ValeurCapture": 4.161213245213313
+                    }
+                ],
+                "sensor_name": "Temperature2",
+                "sensor_type": "Temperature"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage3",
+                        "ValeurCapture": "Confort -1 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage3",
+                        "ValeurCapture": "Confort -1 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage3",
+                        "ValeurCapture": "Confort -1 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage3",
+                        "ValeurCapture": "Confort -1 C"
+                    }
+                ],
+                "sensor_name": "Chauffage3",
+                "sensor_type": "Chauffage"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PriseElec0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PriseElec0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PriseElec0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PriseElec0",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "PriseElec0",
+                "sensor_type": "PriseElec"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt2",
+                        "ValeurCapture": 4.961420190139749
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt2",
+                        "ValeurCapture": 2.432975741068592
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt2",
+                        "ValeurCapture": 5.62926980395755
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt2",
+                        "ValeurCapture": 3.485696655206708
+                    }
+                ],
+                "sensor_name": "PuissanceCapt2",
+                "sensor_type": "PuissanceCapt"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt3",
+                        "ValeurCapture": 3.7541714232996712
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt3",
+                        "ValeurCapture": 4.496919394831835
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt3",
+                        "ValeurCapture": 5.146033615566689
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt3",
+                        "ValeurCapture": 5.893739694377822
+                    }
+                ],
+                "sensor_name": "PuissanceCapt3",
+                "sensor_type": "PuissanceCapt"
+            }
+        ],
+        "Entree": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteEntree0",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteEntree0",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteEntree0",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteEntree0",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "OuverturePorteEntree0",
+                "sensor_type": "OuverturePorteEntree"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule0",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "Ampoule0",
+                "sensor_type": "Ampoule"
+            }
+        ],
+        "Salle de bains": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt4",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "PuissanceCapt4",
+                "sensor_type": "PuissanceCapt"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage4",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage4",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage4",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage4",
+                        "ValeurCapture": "Confort -2 C"
+                    }
+                ],
+                "sensor_name": "Chauffage4",
+                "sensor_type": "Chauffage"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule4",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "Ampoule4",
+                "sensor_type": "Ampoule"
+            }
+        ],
+        "Salon": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre0",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre0",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre0",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre0",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "OuverturePorteFenetre0",
+                "sensor_type": "OuverturePorteFenetre"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "OuverturePorteFenetre1",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "OuverturePorteFenetre1",
+                "sensor_type": "OuverturePorteFenetre"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule1",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule1",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "Ampoule1",
+                "sensor_type": "Ampoule"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule2",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule2",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule2",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule2",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "Ampoule2",
+                "sensor_type": "Ampoule"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence0",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "Presence0",
+                "sensor_type": "Presence"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature0",
+                        "ValeurCapture": 23.80790381088478
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature0",
+                        "ValeurCapture": 25.99491349038358
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature0",
+                        "ValeurCapture": 12.509508213505747
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature0",
+                        "ValeurCapture": 10.159857199038541
+                    }
+                ],
+                "sensor_name": "Temperature0",
+                "sensor_type": "Temperature"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage0",
+                        "ValeurCapture": "Hors gel"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage0",
+                        "ValeurCapture": "Hors gel"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage0",
+                        "ValeurCapture": "Hors gel"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage0",
+                        "ValeurCapture": "Hors gel"
+                    }
+                ],
+                "sensor_name": "Chauffage0",
+                "sensor_type": "Chauffage"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage1",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage1",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage1",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage1",
+                        "ValeurCapture": "Confort -2 C"
+                    }
+                ],
+                "sensor_name": "Chauffage1",
+                "sensor_type": "Chauffage"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt0",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt0",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "PuissanceCapt0",
+                "sensor_type": "PuissanceCapt"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt1",
+                        "ValeurCapture": 1.1972243306316095
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt1",
+                        "ValeurCapture": 4.025351380313586
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt1",
+                        "ValeurCapture": 4.6646662579508655
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt1",
+                        "ValeurCapture": 2.0589285991794553
+                    }
+                ],
+                "sensor_name": "PuissanceCapt1",
+                "sensor_type": "PuissanceCapt"
+            }
+        ]
+    },
+    "Client2": {
+        "Chambre": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule5",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule5",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule5",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule5",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "Ampoule5",
+                "sensor_type": "Ampoule"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence3",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence3",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence3",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence3",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "Presence3",
+                "sensor_type": "Presence"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature3",
+                        "ValeurCapture": 26.002037564938533
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature3",
+                        "ValeurCapture": 23.671506450379603
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature3",
+                        "ValeurCapture": 28.675986565564124
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature3",
+                        "ValeurCapture": 5.254003469318455
+                    }
+                ],
+                "sensor_name": "Temperature3",
+                "sensor_type": "Temperature"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage5",
+                        "ValeurCapture": "Confort"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage5",
+                        "ValeurCapture": "Confort"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage5",
+                        "ValeurCapture": "Confort"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage5",
+                        "ValeurCapture": "Confort"
+                    }
+                ],
+                "sensor_name": "Chauffage5",
+                "sensor_type": "Chauffage"
+            }
+        ],
+        "Cuisine": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule7",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule7",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule7",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule7",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "Ampoule7",
+                "sensor_type": "Ampoule"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence5",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence5",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence5",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence5",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "Presence5",
+                "sensor_type": "Presence"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature5",
+                        "ValeurCapture": 25.964278455236013
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature5",
+                        "ValeurCapture": -6.537797536181481
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature5",
+                        "ValeurCapture": 30.63991752103137
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature5",
+                        "ValeurCapture": 34.416809822614375
+                    }
+                ],
+                "sensor_name": "Temperature5",
+                "sensor_type": "Temperature"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage7",
+                        "ValeurCapture": "Hors gel"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage7",
+                        "ValeurCapture": "Hors gel"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage7",
+                        "ValeurCapture": "Hors gel"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage7",
+                        "ValeurCapture": "Hors gel"
+                    }
+                ],
+                "sensor_name": "Chauffage7",
+                "sensor_type": "Chauffage"
+            }
+        ],
+        "Salle de bains": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt5",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt5",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt5",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "PuissanceCapt5",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "PuissanceCapt5",
+                "sensor_type": "PuissanceCapt"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage8",
+                        "ValeurCapture": "Eco"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage8",
+                        "ValeurCapture": "Eco"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage8",
+                        "ValeurCapture": "Eco"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage8",
+                        "ValeurCapture": "Eco"
+                    }
+                ],
+                "sensor_name": "Chauffage8",
+                "sensor_type": "Chauffage"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule8",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule8",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule8",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule8",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "Ampoule8",
+                "sensor_type": "Ampoule"
+            }
+        ],
+        "Salon": [
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule6",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule6",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule6",
+                        "ValeurCapture": 1
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Ampoule6",
+                        "ValeurCapture": 1
+                    }
+                ],
+                "sensor_name": "Ampoule6",
+                "sensor_type": "Ampoule"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence4",
+                        "ValeurCapture": 0
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Presence4",
+                        "ValeurCapture": 0
+                    }
+                ],
+                "sensor_name": "Presence4",
+                "sensor_type": "Presence"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature4",
+                        "ValeurCapture": -3.386379020487296
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature4",
+                        "ValeurCapture": 29.96209833223456
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature4",
+                        "ValeurCapture": -9.027166041739958
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Temperature4",
+                        "ValeurCapture": 26.15071605828504
+                    }
+                ],
+                "sensor_name": "Temperature4",
+                "sensor_type": "Temperature"
+            },
+            {
+                "generated_data": [
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage6",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage6",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage6",
+                        "ValeurCapture": "Confort -2 C"
+                    },
+                    {
+                        "DateCapture": "10/01/2020 12:26:09",
+                        "NomCapteur": "Chauffage6",
+                        "ValeurCapture": "Confort -2 C"
+                    }
+                ],
+                "sensor_name": "Chauffage6",
+                "sensor_type": "Chauffage"
+            }
+        ]
+    }
+}
