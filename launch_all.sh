@@ -4,9 +4,17 @@ pwd
 ls
 
 # delete all containers
-printf "\n\nRemoving all containers\n"
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
+while true; do
+    read -p "Do you wish to DELETE ALL CONTAINERS?" yn
+    case $yn in
+        [Yy]* ) printf "\n\nRemoving all containers\n"
+            docker stop $(docker ps -a -q)
+            docker rm $(docker ps -a -q); break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
 
 # Re-aunching all containers
 printf "\n\nRelaunching all containers\n"
@@ -14,6 +22,11 @@ docker-compose -f rabbitmq/docker-compose-rabbitmq.yml up -d
 docker-compose -f mongodb/docker-compose-mongodb.yml up -d
 
 sleep 5
+
+# Installing prerequisites
+sudo apt-get -y install python3-pip
+pip3 install pymongo
+pip3 install pika
 
 # Re-launching all the configuration scripts
 printf "\n\nRe-launching all the configuration scripts\n"
