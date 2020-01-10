@@ -1,6 +1,7 @@
 import pika
 import random
 import json
+import time
 from datetime import datetime
 
 '''
@@ -53,6 +54,7 @@ def gen_data (sensor_type, sensor_name, nb):
             else:
                 val2 = 0
             returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  val2})
+    time.sleep(0.5)
     return returned_data
 
 
@@ -310,7 +312,7 @@ data = {
 '''
 
 captures_by_sensor = 60
-verbose = False
+verbose = True
 
 print("generate_data.py: generating names and data")
 
@@ -341,9 +343,10 @@ for client in data:
 if verbose: print (tmp_sensor_names_counters)
 if verbose: print(json.dumps(data, indent=4, sort_keys=True))
 
-f= open("../generated_data.txt","w+")
-f.write(json.dumps(data, indent=4, sort_keys=True))
-f.close()
+if verbose: 
+    f= open("../generated_data.txt","w+")
+    f.write(json.dumps(data, indent=4, sort_keys=True))
+    f.close()
 
 
 
