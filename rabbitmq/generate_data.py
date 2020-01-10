@@ -61,7 +61,7 @@ def gen_data (sensor_type, sensor_name, nb):
 '''
 
 
-# Both clients sensors data
+# Both clients sensors data initialisation
 
 client1_data = {
     "Entree": [
@@ -309,7 +309,10 @@ data = {
 
 '''
 
-captures_by_sensor = 4
+captures_by_sensor = 60
+verbose = False
+
+print("generate_data.py: generating names and data")
 
 tmp_sensor_names_counters = {}
 
@@ -331,21 +334,53 @@ for client in data:
             data[client][room][sensor_idx]["sensor_name"] = sensor_name
             data[client][room][sensor_idx]["generated_data"] = gen_data(sensor_type, sensor_name, captures_by_sensor)
 
-print (tmp_sensor_names_counters)
 
 
 
-#Saving all data in file
-print(json.dumps(data, indent=4, sort_keys=True))
+#Saving all data in file and print it on console
+if verbose: print (tmp_sensor_names_counters)
+if verbose: print(json.dumps(data, indent=4, sort_keys=True))
+
 f= open("../generated_data.txt","w+")
 f.write(json.dumps(data, indent=4, sort_keys=True))
 f.close()
 
-# Connecting to rabbitmq
-channel, connection = rabbitmq_connection()
 
-# Publishing messages
-# pub_msg(channel, msg='Hello World!')
 
-# Disconnecting from Rabbitmq
-connection.close()
+
+
+'''
+    Send all data to rabbitmq
+
+'''
+print("generate_data.py: sending all data to rabbitmq")
+
+for client in data:
+    client_data = data[client]
+
+    # Connecting to rabbitmq
+    channel, connection = rabbitmq_connection(vhost = client)
+
+    for room in client_data:
+        room_sensors = client_data[room]
+        for sensor_idx, sensor in enumerate(room_sensors, start=0):
+            sensor_data = sensor["generated_data"]
+            for capture in sensor_data:
+                pub_msg(channel, exchange= client+"-Maison1", msg=str(capture))
+
+    # Disconnecting from Rabbitmq
+    connection.close()
+
+
+print("generate_data.py: finished successfully")
+
+
+
+
+
+
+
+
+
+
+

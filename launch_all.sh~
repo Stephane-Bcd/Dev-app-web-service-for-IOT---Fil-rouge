@@ -21,7 +21,7 @@ sh rabbitmq/rabbitmq-generate-config.sh
 
 # Launching data geneation scripts
 printf "\n\nLaunching data generation scripts\n"
-# docker-compose -f mock\ data/docker-compose-mock-data.yml up
-python3 rabbitmq/generate_data.py
+docker-compose -f mock\ data/docker-compose-mock-data.yml up
+# python3 ./rabbitmq/generate_data.py
 
 
