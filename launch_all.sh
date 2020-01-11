@@ -1,5 +1,5 @@
 # Go to project folder
-# cd "/media/stephane/DATA/ESILV/A5/Dev Apps et Web services pour l'IOT/TP/Fichiers TP/"
+cd "/media/stephane/DATA/ESILV/A5/Dev Apps et Web services pour l'IOT/TP/Fichiers TP/Dev app & web service for IOT - Fil rouge/"
 pwd
 ls
 
@@ -41,6 +41,12 @@ python3 mongodb/mongodb_generate_config.py
 printf "\n\nLaunching data generation scripts\n"
 # docker-compose -f mock\ data/docker-compose-mock-data.yml up
 python3 rabbitmq/generate_data.py
-python3 mongodb/mongodb_send_data_from_json_file.py
+#python3 mongodb/mongodb_send_data_from_json_file.py
+docker-compose -f mongodb/docker-compose-rabbitmq-mongodb.yml up -d
+
+
+
+
+
 
 
