@@ -355,7 +355,7 @@ if verbose: print (tmp_sensor_names_counters)
 if verbose: print(json.dumps(data, indent=4, sort_keys=True))
 
 if verbose: 
-    f= open("../generated_data.txt","w+")
+    f= open("generated_data.txt","w+")
     f.write(json.dumps(data, indent=4, sort_keys=True))
     f.close()
 

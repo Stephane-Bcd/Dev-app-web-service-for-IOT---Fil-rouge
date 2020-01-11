@@ -13,4 +13,6 @@ def gen_datetime(min_year=2018, max_year=datetime.now().year):
     formatted_date = generated_datetime.strftime("%d/%m/%Y %H:%M:%S")
     return formatted_date, generated_datetime.timestamp()
 
-print(gen_datetime())
+# print(gen_datetime())
+
+print(datetime(2019, 1, 1, 00, 00, 00).timestamp())
