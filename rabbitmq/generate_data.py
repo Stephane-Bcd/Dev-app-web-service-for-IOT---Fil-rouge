@@ -33,8 +33,9 @@ def gen_datetime(min_year=2018, max_year=datetime.now().year):
     start = datetime(min_year, 1, 1, 00, 00, 00)
     years = max_year - min_year + 1
     end = start + timedelta(days=365 * years)
-    generated_date = (start + (end - start) * random.random()).strftime("%d/%m/%Y %H:%M:%S")
-    return generated_date
+    generated_datetime = start + (end - start) * random.random()
+    formatted_date = generated_datetime.strftime("%d/%m/%Y %H:%M:%S")
+    return formatted_date, generated_datetime.timestamp()
 
 '''
     Function to generate random data for a specific sensot
@@ -44,18 +45,18 @@ def gen_data (sensor_type, sensor_name, nb):
     returned_data = []
 
     for i in range (0,nb):
-        date = gen_datetime()
+        date, timestamp = gen_datetime()
 
         if sensor_type in ["OuverturePorteEntree","Ampoule","OuverturePorteFenetre","Presence"]:
             if i==0:
                 val = random.choice([0, 1])
-            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date,"ValeurCapture":  val})
+            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date,"ValeurCapture":  val, "TimestampCapture": timestamp})
         elif sensor_type == "Temperature":
-            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  random.uniform(-10.0, 35.0)})
+            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  random.uniform(-10.0, 35.0), "TimestampCapture": timestamp})
         elif sensor_type == "Chauffage":
             if i==0:
                 val = random.choice(["Confort", "Confort -1 C", "Confort -2 C", "Eco", "Hors gel", "Arret"])
-            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  val})
+            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  val, "TimestampCapture": timestamp})
         elif sensor_type in ["PuissanceCapt","PriseElec"]:
             if i==0:
                 val = random.choice([True,False])
@@ -63,7 +64,7 @@ def gen_data (sensor_type, sensor_name, nb):
                 val2 = random.uniform(1, 6)
             else:
                 val2 = 0
-            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  val2})
+            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  val2, "TimestampCapture": timestamp})
 
     return returned_data
 
