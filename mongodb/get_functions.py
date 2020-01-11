@@ -58,7 +58,39 @@ def get_avg_in_period(mycol=connect_to_collection(), sensor_name="Temperature1",
     print("Average for sensor "+sensor_name+" between dates "+start_str+" and "+end_str+": \n"+dumps(mydoc, indent=4, sort_keys=True)+"\n\n") 
     return dumps(mydoc, indent=4, sort_keys=True)
 
+def get_min_in_period(mycol=connect_to_collection(), sensor_name="Temperature1", start=datetime(2018, 9, 1, 00, 00, 00), end=datetime(2020, 1, 1, 00, 00, 00)):
 
+    start_str = start.strftime("%d/%m/%Y %H:%M:%S")
+    end_str = end.strftime("%d/%m/%Y %H:%M:%S")
+    start = start.timestamp()
+    end = end.timestamp()
+
+    pipeline = [
+        {
+            "$match": {
+                "NomCapteur": sensor_name,
+                "TimestampCapture": {
+                    "$gte": start,
+                    "$lt": end
+                }  
+            }
+        },
+        {
+            "$group": {
+                "_id": "$NomCapteur",
+                "min": {
+                    "$min": "$ValeurCapture"
+                }
+            }
+        },
+        {"$sort": {"TimestampCapture": -1}}
+    ]
+
+
+    mydoc = mycol.aggregate(pipeline)
+
+    print("Minimum for sensor "+sensor_name+" between dates "+start_str+" and "+end_str+": \n"+dumps(mydoc, indent=4, sort_keys=True)+"\n\n") 
+    return dumps(mydoc, indent=4, sort_keys=True)
 
 '''
     TESTS
@@ -69,6 +101,7 @@ if need_tests:
     get_sensor_captures()
     get_last_sensor_capture()
     get_avg_in_period()
+    get_min_in_period()
 
 
 
