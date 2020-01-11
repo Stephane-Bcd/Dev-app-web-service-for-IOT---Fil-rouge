@@ -31,6 +31,7 @@ docker network create iot-labs
 printf "\n\nRelaunching all containers\n"
 docker-compose -f rabbitmq/docker-compose-rabbitmq.yml up -d
 docker-compose -f mongodb/docker-compose-mongodb.yml up -d
+docker-compose -f nifi/docker-compose-nifi.yml up -d
 
 sleep 10s
 
@@ -47,7 +48,7 @@ python3 rabbitmq/generate_data.py
 
 #(python script to use generated file; docker-compose to connect mongo with rabbitmq)
 python3 mongodb/mongodb_send_data_from_json_file.py
-docker-compose -f mongodb/docker-compose-rabbitmq-mongodb.yml up -d
+# docker-compose -f mongodb/docker-compose-rabbitmq-mongodb.yml up -d
 
 
 
