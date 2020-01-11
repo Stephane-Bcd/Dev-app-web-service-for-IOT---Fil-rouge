@@ -2,7 +2,7 @@ import pika
 import random
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 '''
     Function to connect to rabbitmq
@@ -25,6 +25,16 @@ def pub_msg(channel, exchange= "Client1-Maison1", routing_key = "", msg='Hello W
     channel.basic_publish(exchange=exchange,
                           routing_key=routing_key,
                           body=msg)
+'''
+    Function to generate random date
+'''
+def gen_datetime(min_year=2018, max_year=datetime.now().year):
+    # generate a datetime in format yyyy-mm-dd hh:mm:ss.000000
+    start = datetime(min_year, 1, 1, 00, 00, 00)
+    years = max_year - min_year + 1
+    end = start + timedelta(days=365 * years)
+    generated_date = (start + (end - start) * random.random()).strftime("%d/%m/%Y %H:%M:%S")
+    return generated_date
 
 '''
     Function to generate random data for a specific sensot
@@ -34,7 +44,7 @@ def gen_data (sensor_type, sensor_name, nb):
     returned_data = []
 
     for i in range (0,nb):
-        date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        date = gen_datetime()
 
         if sensor_type in ["OuverturePorteEntree","Ampoule","OuverturePorteFenetre","Presence"]:
             if i==0:
@@ -54,7 +64,7 @@ def gen_data (sensor_type, sensor_name, nb):
             else:
                 val2 = 0
             returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  val2})
-    time.sleep(0.5)
+
     return returned_data
 
 
@@ -311,7 +321,7 @@ data = {
 
 '''
 
-captures_by_sensor = 60
+captures_by_sensor = 10
 verbose = True
 
 print("generate_data.py: generating names and data")
