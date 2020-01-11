@@ -32,9 +32,15 @@ pip3 install pika
 printf "\n\nRe-launching all the configuration scripts\n"
 sh rabbitmq/rabbitmq-generate-config.sh
 
+#Remove files to be able to put data in mongodb
+# docker exec -d mongodb_mongo_1 rm /data/db/mongod.lock
+# docker exec -d mongodb_mongo_1 rm rm /data/db/WiredTiger.lock
+# docker exec -d mongodb_mongo_1 mongod --repair
+# docker exec -d mongodb_mongo_1 service mongodb restart
+
 # Launching data geneation scripts
 printf "\n\nLaunching data generation scripts\n"
 # docker-compose -f mock\ data/docker-compose-mock-data.yml up
-python3 rabbitmq/generate_data.py
+# python3 rabbitmq/generate_data.py
 
 

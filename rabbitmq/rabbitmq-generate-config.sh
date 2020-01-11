@@ -104,25 +104,25 @@ curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"rout
 
 
 # Send a message on an exchange:
-curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"properties":{},"routing_key":"","payload":"test from client","payload_encoding":"string"}' \
-    http://localhost:15672/api/exchanges/Client1/Client1-Maison1/publish
+# curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"properties":{},"routing_key":"","payload":"test from client","payload_encoding":"string"}' \
+#     http://localhost:15672/api/exchanges/Client1/Client1-Maison1/publish
 
 # result: works
 
 
-curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"properties":{},"routing_key":"client1maison1","payload":"test to client","payload_encoding":"string"}' \
-    http://localhost:15672/api/exchanges/Client1-BackHome/Client1-BackHome/publish
+# curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"properties":{},"routing_key":"client1maison1","payload":"test to client","payload_encoding":"string"}' \
+#     http://localhost:15672/api/exchanges/Client1-BackHome/Client1-BackHome/publish
 
 # result: works
 
 
 # Get Messages:
-curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"count":5,"requeue":true,"encoding":"auto","truncate":50000,"ackmode":"ack_requeue_false"}' \
-    http://localhost:15672/api/queues/Client1/Client1/get
+# curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"count":5,"requeue":true,"encoding":"auto","truncate":50000,"ackmode":"ack_requeue_false"}' \
+#     http://localhost:15672/api/queues/Client1/Client1/get
 
 
-curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"count":5,"requeue":true,"encoding":"auto","truncate":50000,"ackmode":"ack_requeue_false"}' \
-    http://localhost:15672/api/queues/Client1-BackHome/Client1-Maison1/get
+# curl -i -u rabbitmq:rabbitmq -H "content-type:application/json" -XPOST -d'{"count":5,"requeue":true,"encoding":"auto","truncate":50000,"ackmode":"ack_requeue_false"}' \
+#     http://localhost:15672/api/queues/Client1-BackHome/Client1-Maison1/get
 
 # Result: both worked fine !
 
