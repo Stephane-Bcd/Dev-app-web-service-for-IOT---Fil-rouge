@@ -3,6 +3,14 @@
 pwd
 ls
 
+
+
+# Installing prerequisites
+printf "\n\nInstalling prerequisites\n"
+sudo apt-get -y install python3-pip
+pip3 install pymongo
+pip3 install pika
+
 # delete all containers
 while true; do
     read -p "Do you wish to DELETE ALL CONTAINERS?" yn
@@ -23,24 +31,15 @@ docker-compose -f mongodb/docker-compose-mongodb.yml up -d
 
 sleep 5
 
-# Installing prerequisites
-sudo apt-get -y install python3-pip
-pip3 install pymongo
-pip3 install pika
-
 # Re-launching all the configuration scripts
 printf "\n\nRe-launching all the configuration scripts\n"
 sh rabbitmq/rabbitmq-generate-config.sh
+python3 mongodb/mongodb_generate_config.py
 
-#Remove files to be able to put data in mongodb
-# docker exec -d mongodb_mongo_1 rm /data/db/mongod.lock
-# docker exec -d mongodb_mongo_1 rm rm /data/db/WiredTiger.lock
-# docker exec -d mongodb_mongo_1 mongod --repair
-# docker exec -d mongodb_mongo_1 service mongodb restart
 
 # Launching data geneation scripts
 printf "\n\nLaunching data generation scripts\n"
 # docker-compose -f mock\ data/docker-compose-mock-data.yml up
-# python3 rabbitmq/generate_data.py
+python3 rabbitmq/generate_data.py
 
 
