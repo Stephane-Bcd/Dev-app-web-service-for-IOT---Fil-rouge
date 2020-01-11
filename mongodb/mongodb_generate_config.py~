@@ -1,13 +1,7 @@
 import pymongo
 import json
 
-def create_indexes(col):
-    resp = col.create_index([ 
-        ("TypeCapteur", -1),
-        ("NomCapteur", -1),
-        ("NomPiece", -1),
-        ("NomMaison", -1)
-    ])
+
 
 
 project_fullpath = "/media/stephane/DATA/ESILV/A5/Dev Apps et Web services pour l'IOT/TP/Fichiers TP/Dev app & web service for IOT - Fil rouge"
@@ -29,7 +23,6 @@ with open(project_fullpath+'/generated_data.txt') as json_file:
                 print(document)
                 databases[client]["metadatacol"].insert_one(document)
                 
-        create_indexes(databases[client]["metadatacol"])
 
 
 
