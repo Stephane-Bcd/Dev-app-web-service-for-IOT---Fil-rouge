@@ -6,10 +6,10 @@ ls
 
 
 # Installing prerequisites
-printf "\n\nInstalling prerequisites\n"
-sudo apt-get -y install python3-pip
-pip3 install pymongo
-pip3 install pika
+# printf "\n\nInstalling prerequisites\n"
+# sudo apt-get -y install python3-pip
+# pip3 install pymongo
+# pip3 install pika
 
 # delete all containers
 while true; do

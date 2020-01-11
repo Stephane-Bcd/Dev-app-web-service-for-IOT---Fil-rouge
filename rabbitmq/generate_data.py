@@ -22,9 +22,12 @@ def rabbitmq_connection(adress = "localhost", port = 5672, vhost = "Client1", us
     Function to post a message on an eschange
 '''
 def pub_msg(channel, exchange= "Client1-Maison1", routing_key = "", msg='Hello World!'):
+    properties = pika.BasicProperties(content_type="application/json", content_encoding="utf8")
     channel.basic_publish(exchange=exchange,
-                          routing_key=routing_key,
-                          body=msg)
+            routing_key=routing_key,
+            body=msg,
+            properties=properties
+        )
 '''
     Function to generate random date
 '''
@@ -381,7 +384,7 @@ for client in data:
         for sensor_idx, sensor in enumerate(room_sensors, start=0):
             sensor_data = sensor["generated_data"]
             for capture in sensor_data:
-                pub_msg(channel, exchange= client+"-Maison1", msg=str(capture))
+                pub_msg(channel, exchange= client+"-Maison1", msg=str(json.dumps(capture)))
 
     # Disconnecting from Rabbitmq
     connection.close()
