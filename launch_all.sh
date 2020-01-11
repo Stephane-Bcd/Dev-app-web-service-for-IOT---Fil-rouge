@@ -41,7 +41,9 @@ python3 mongodb/mongodb_generate_config.py
 printf "\n\nLaunching data generation scripts\n"
 # docker-compose -f mock\ data/docker-compose-mock-data.yml up
 python3 rabbitmq/generate_data.py
-#python3 mongodb/mongodb_send_data_from_json_file.py
+
+#(python script to use generated file; docker-compose to connect mongo with rabbitmq)
+python3 mongodb/mongodb_send_data_from_json_file.py
 docker-compose -f mongodb/docker-compose-rabbitmq-mongodb.yml up -d
 
 

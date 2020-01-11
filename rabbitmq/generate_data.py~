@@ -327,30 +327,28 @@ data = {
 
 captures_by_sensor = 10
 verbose = True
-clients_to_ignore = []
 
 print("generate_data.py: generating names and data")
 
 tmp_sensor_names_counters = {}
 
 for client in data:
-    if client not in clients_to_ignore:
-        client_data = data[client]
-        for room in client_data:
-            room_sensors = client_data[room]
+    client_data = data[client]
+    for room in client_data:
+        room_sensors = client_data[room]
+        
+        for sensor_idx, sensor in enumerate(room_sensors, start=0):
+
+            sensor_type = sensor["sensor_type"]
+
+            if not sensor_type in tmp_sensor_names_counters:
+                tmp_sensor_names_counters[sensor_type] = 0
             
-            for sensor_idx, sensor in enumerate(room_sensors, start=0):
-
-                sensor_type = sensor["sensor_type"]
-
-                if not sensor_type in tmp_sensor_names_counters:
-                    tmp_sensor_names_counters[sensor_type] = 0
-                
-                sensor_name = sensor_type + str(tmp_sensor_names_counters[sensor_type])
-                tmp_sensor_names_counters[sensor_type]+=1
-                
-                data[client][room][sensor_idx]["sensor_name"] = sensor_name
-                data[client][room][sensor_idx]["generated_data"] = gen_data(sensor_type, sensor_name, captures_by_sensor)
+            sensor_name = sensor_type + str(tmp_sensor_names_counters[sensor_type])
+            tmp_sensor_names_counters[sensor_type]+=1
+            
+            data[client][room][sensor_idx]["sensor_name"] = sensor_name
+            data[client][room][sensor_idx]["generated_data"] = gen_data(sensor_type, sensor_name, captures_by_sensor)
 
 
 

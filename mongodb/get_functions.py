@@ -2,7 +2,7 @@ import pymongo
 from bson.json_util import dumps
 from datetime import datetime
 
-def connect_to_collection(address="localhost", port="27017", db="Client1", col="captures"):
+def connect_to_collection(address="localhost", port="27017", db="Client2", col="captures"):
     myclient = pymongo.MongoClient("mongodb://"+address+":"+port+"/")
     mydb = myclient[db]
     mycol = mydb[col]
@@ -92,12 +92,20 @@ def get_min_in_period(mycol=connect_to_collection(), sensor_name="Temperature1",
     print("Minimum for sensor "+sensor_name+" between dates "+start_str+" and "+end_str+": \n"+dumps(mydoc, indent=4, sort_keys=True)+"\n\n") 
     return dumps(mydoc, indent=4, sort_keys=True)
 
+def create_indexes(col=connect_to_collection()):
+    resp = col.create_index([ 
+        ("TimestampCapture", -1),
+        ("NomCapteur", -1),
+        ("DateCapture", -1)
+    ])
+
 '''
     TESTS
 '''
 need_tests = True
 
 if need_tests:
+    create_indexes()
     get_sensor_captures()
     get_last_sensor_capture()
     get_avg_in_period()
