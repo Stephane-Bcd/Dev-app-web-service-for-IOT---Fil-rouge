@@ -1,15 +1,16 @@
 # Go to project folder
-cd "/media/stephane/DATA/ESILV/A5/Dev Apps et Web services pour l'IOT/TP/Fichiers TP/Dev app & web service for IOT - Fil rouge/"
+export PROJECTPATH="/home/stephanevm/Documents/FilRouge/Dev-app-web-service-for-IOT---Fil-rouge"
+
 pwd
 ls
 
 
 
 # Installing prerequisites
-# printf "\n\nInstalling prerequisites\n"
-# sudo apt-get -y install python3-pip
-# pip3 install pymongo
-# pip3 install pika
+printf "\n\nInstalling prerequisites\n"
+sudo apt-get -y install python3-pip
+pip3 install pymongo
+pip3 install pika
 
 # delete all containers
 while true; do
@@ -24,12 +25,14 @@ while true; do
 done
 
 
+docker network create iot-labs
+
 # Re-aunching all containers
 printf "\n\nRelaunching all containers\n"
 docker-compose -f rabbitmq/docker-compose-rabbitmq.yml up -d
 docker-compose -f mongodb/docker-compose-mongodb.yml up -d
 
-sleep 5
+sleep 10s
 
 # Re-launching all the configuration scripts
 printf "\n\nRe-launching all the configuration scripts\n"

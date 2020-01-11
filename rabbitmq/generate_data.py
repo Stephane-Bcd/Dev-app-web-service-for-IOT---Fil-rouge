@@ -3,6 +3,7 @@ import random
 import json
 import time
 from datetime import datetime, timedelta
+import os
 
 '''
     Function to connect to rabbitmq
@@ -326,7 +327,7 @@ data = {
 '''
 
 captures_by_sensor = 10
-verbose = True
+verbose = False
 clients_to_ignore = []
 
 print("generate_data.py: generating names and data")
@@ -359,11 +360,11 @@ for client in data:
 if verbose: print (tmp_sensor_names_counters)
 if verbose: print(json.dumps(data, indent=4, sort_keys=True))
 
-if verbose: 
-    project_fullpath = "/media/stephane/DATA/ESILV/A5/Dev Apps et Web services pour l'IOT/TP/Fichiers TP/Dev app & web service for IOT - Fil rouge"
-    f= open(project_fullpath+"/generated_data.txt","w+")
-    f.write(json.dumps(data, indent=4, sort_keys=True))
-    f.close()
+
+project_fullpath = os.environ['PROJECTPATH']
+f= open(project_fullpath+"/generated_data.txt","w+")
+f.write(json.dumps(data, indent=4, sort_keys=True))
+f.close()
 
 
 

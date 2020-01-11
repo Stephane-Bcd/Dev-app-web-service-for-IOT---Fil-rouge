@@ -102,7 +102,7 @@ def create_indexes(col=connect_to_collection()):
 '''
     TESTS
 '''
-need_tests = False
+need_tests = True
 
 if need_tests:
     create_indexes()
