@@ -19,6 +19,7 @@ if (flowFile != null) {
         for (key in message_content){
             if (key == 'NomCapteur') {
                 sensor = message_content[key]
+                measure = message_content[key]
             } else if (key == 'TimestampCapture') {
 				date = message_content[key]  * 1000 * 1000 * 1000
             } else if (key == 'ValeurCapture') {
