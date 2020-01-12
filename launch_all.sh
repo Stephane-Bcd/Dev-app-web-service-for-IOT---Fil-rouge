@@ -32,6 +32,7 @@ printf "\n\nRelaunching all containers\n"
 docker-compose -f rabbitmq/docker-compose-rabbitmq.yml up -d
 docker-compose -f mongodb/docker-compose-mongodb.yml up -d
 docker-compose -f nifi/docker-compose-nifi.yml up -d
+docker-compose -f nifi/docker-compose-ftp.yml up -d
 
 sleep 15s
 
