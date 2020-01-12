@@ -33,7 +33,7 @@ docker-compose -f rabbitmq/docker-compose-rabbitmq.yml up -d
 docker-compose -f mongodb/docker-compose-mongodb.yml up -d
 docker-compose -f nifi/docker-compose-nifi.yml up -d
 
-sleep 10s
+sleep 15s
 
 # Re-launching all the configuration scripts
 printf "\n\nRe-launching all the configuration scripts\n"
