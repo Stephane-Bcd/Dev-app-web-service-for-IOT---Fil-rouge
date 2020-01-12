@@ -39,4 +39,10 @@ weather_db = connection["weather"]
 country_col = weather_db["paris"]
 
 
+# creating csv from FTP server collection
+connection = pymongo.MongoClient("mongodb://localhost:27017/")
+weather_db = connection["FTP"]
+country_col = weather_db["csv"]
+
+
 print ( connection.list_database_names())

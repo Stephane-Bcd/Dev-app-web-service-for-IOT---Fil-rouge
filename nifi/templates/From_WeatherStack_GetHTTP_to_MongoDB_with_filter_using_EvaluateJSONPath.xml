@@ -4,6 +4,82 @@
     <groupId>97078bb7-016f-1000-70fe-17606f2e6090</groupId>
     <name>From WeatherStack GetHTTP to MongoDB with filter using EvaluateJSONPath</name>
     <snippet>
+        <connections>
+            <id>5015ecb9-0331-3b97-0000-000000000000</id>
+            <parentGroupId>f8ca011e-5b41-30eb-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>f8ca011e-5b41-30eb-0000-000000000000</groupId>
+                <id>1a6b8986-9a90-31b1-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>f8ca011e-5b41-30eb-0000-000000000000</groupId>
+                <id>33b76609-52ff-3cca-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>57ad54be-90dd-3eed-0000-000000000000</id>
+            <parentGroupId>f8ca011e-5b41-30eb-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>f8ca011e-5b41-30eb-0000-000000000000</groupId>
+                <id>653dd684-19af-32b1-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>matched</selectedRelationships>
+            <selectedRelationships>unmatched</selectedRelationships>
+            <source>
+                <groupId>f8ca011e-5b41-30eb-0000-000000000000</groupId>
+                <id>1a6b8986-9a90-31b1-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>bf8372a5-29a0-33e3-0000-000000000000</id>
+            <parentGroupId>f8ca011e-5b41-30eb-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>f8ca011e-5b41-30eb-0000-000000000000</groupId>
+                <id>b7cb8f83-1a7f-3499-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <source>
+                <groupId>f8ca011e-5b41-30eb-0000-000000000000</groupId>
+                <id>653dd684-19af-32b1-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
         <processors>
             <id>1a6b8986-9a90-31b1-0000-000000000000</id>
             <parentGroupId>f8ca011e-5b41-30eb-0000-000000000000</parentGroupId>
@@ -557,5 +633,5 @@
             <type>org.apache.nifi.processors.standard.LogAttribute</type>
         </processors>
     </snippet>
-    <timestamp>01/12/2020 18:27:18 UTC</timestamp>
+    <timestamp>01/12/2020 19:21:16 UTC</timestamp>
 </template>
