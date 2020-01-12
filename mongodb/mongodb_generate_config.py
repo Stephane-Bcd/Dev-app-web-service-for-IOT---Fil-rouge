@@ -33,6 +33,10 @@ with open(project_fullpath+'/generated_data.txt') as json_file:
         create_indexes(databases[client]["metadatacol"])
 
 
+# creating weather collection
+connection = pymongo.MongoClient("mongodb://localhost:27017/")
+weather_db = connection["weather"]
+country_col = weather_db["paris"]
 
 
 print ( connection.list_database_names())
