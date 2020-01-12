@@ -4,6 +4,7 @@ import json
 import time
 from datetime import datetime, timedelta
 import os
+import math
 
 '''
     Function to connect to rabbitmq
@@ -32,14 +33,14 @@ def pub_msg(channel, exchange= "Client1-Maison1", routing_key = "", msg='Hello W
 '''
     Function to generate random date
 '''
-def gen_datetime(min_year=2018, max_year=datetime.now().year):
+def gen_datetime(min_year=2018, max_year=datetime.now().year-1):
     # generate a datetime in format yyyy-mm-dd hh:mm:ss.000000
     start = datetime(min_year, 1, 1, 00, 00, 00)
     years = max_year - min_year + 1
     end = start + timedelta(days=365 * years)
     generated_datetime = start + (end - start) * random.random()
     formatted_date = generated_datetime.strftime("%d/%m/%Y %H:%M:%S")
-    return formatted_date, generated_datetime.timestamp()
+    return formatted_date, math.floor(generated_datetime.timestamp())
 
 '''
     Function to generate random data for a specific sensot
@@ -54,9 +55,9 @@ def gen_data (sensor_type, sensor_name, nb):
         if sensor_type in ["OuverturePorteEntree","Ampoule","OuverturePorteFenetre","Presence"]:
             if i==0:
                 val = random.choice([0, 1])
-            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date,"ValeurCapture":  val, "TimestampCapture": timestamp})
+            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date,"ValeurCapture":  math.floor(val), "TimestampCapture": timestamp})
         elif sensor_type == "Temperature":
-            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  random.uniform(-10.0, 35.0), "TimestampCapture": timestamp})
+            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  math.floor(random.uniform(-10.0, 35.0)*100)/100, "TimestampCapture": timestamp})
         elif sensor_type == "Chauffage":
             if i==0:
                 val = random.choice(["Confort", "Confort -1 C", "Confort -2 C", "Eco", "Hors gel", "Arret"])
@@ -68,7 +69,7 @@ def gen_data (sensor_type, sensor_name, nb):
                 val2 = random.uniform(1, 6)
             else:
                 val2 = 0
-            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  val2, "TimestampCapture": timestamp})
+            returned_data.append({"NomCapteur": sensor_name, "DateCapture": date, "ValeurCapture":  math.floor(val2), "TimestampCapture": timestamp})
 
     return returned_data
 
@@ -326,7 +327,7 @@ data = {
 
 '''
 
-captures_by_sensor = 10
+captures_by_sensor = 90
 verbose = False
 clients_to_ignore = []
 
