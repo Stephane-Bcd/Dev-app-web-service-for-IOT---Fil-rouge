@@ -18,15 +18,13 @@ def get_sensor_captures(mycol=connect_to_collection(), sensor_name="Temperature5
 
     mydoc = mycol.find(myquery).sort("TimestampCapture", 1) #tri en descendant
     
-    print("All captures for sensor "+sensor_name+": \n"+str(dumps(mydoc, indent=4, sort_keys=True))+"\n\n") 
-    return dumps(mydoc, indent=4, sort_keys=True)
+    return dumps(mydoc)
 
 def get_last_sensor_capture(mycol=connect_to_collection(), sensor_name="Temperature5"):
     myquery = {"NomCapteur": sensor_name}
 
     mydoc = mycol.find(myquery).sort("TimestampCapture", -1) #tri en descendant
     
-    print("Last capture for sensor "+sensor_name+": \n"+str(mydoc[0])+"\n\n") 
     return dumps(mydoc[0])
 
 def get_avg_in_period(mycol=connect_to_collection(), sensor_name="Temperature5", start=datetime(2019, 9, 1, 00, 00, 00), end=datetime(2020, 1, 1, 00, 00, 00)):
@@ -92,9 +90,8 @@ def get_min_in_period(mycol=connect_to_collection(), sensor_name="Temperature5",
 
 
     mydoc = mycol.aggregate(pipeline)
-
-    print("Minimum for sensor "+sensor_name+" between dates "+start_str+" and "+end_str+": \n"+dumps(mydoc, indent=4, sort_keys=True)+"\n\n") 
-    return dumps(mydoc, indent=4, sort_keys=True)
+ 
+    return dumps(mydoc)
 
 def create_indexes(col=connect_to_collection()):
     resp = col.create_index([ 
@@ -102,6 +99,30 @@ def create_indexes(col=connect_to_collection()):
         ("NomCapteur", -1),
         ("DateCapture", -1)
     ])
+
+
+def allrecords_get():  # noqa: E501
+    """Retourne toutes les captures des capteurs
+
+    Optional extended description in CommonMark or HTML. # noqa: E501
+
+
+    :rtype: List[int]
+    """
+    return get_sensor_captures()
+
+
+def last_sensor_id_get(sensor_id):  # noqa: E501
+    """Calculer la dernière valeur
+
+    Optional extended description in CommonMark or HTML. # noqa: E501
+
+    :param sensor_id: String Id of the sensor to get
+    :type sensor_id: str
+
+    :rtype: List[int]
+    """
+    return get_last_sensor_capture(sensor_name=sensor_id)
 
 
 def mean_sensor_id_get(sensor_id, start_date=1484275868, end_date=1578883868 ):  # noqa: E501
@@ -123,4 +144,21 @@ def mean_sensor_id_get(sensor_id, start_date=1484275868, end_date=1578883868 ): 
 
 	return get_avg_in_period(sensor_name=sensor_id, start=datetime.fromtimestamp(start_date), end=datetime.fromtimestamp(end_date))
 
-# mean_sensor_id_get(sensor_id="Temperature3")
+#print(mean_sensor_id_get(sensor_id="Temperature3"))
+
+
+def min_sensor_id_get(sensor_id, start_date=1484275868, end_date=1578883868):  # noqa: E501
+    """Calculer la valeur minimale d&#x27;un capteur entre deux dates
+
+    Optional extended description in CommonMark or HTML. # noqa: E501
+
+    :param sensor_id: String Id of the sensor to get
+    :type sensor_id: str
+    :param start_date: Integer/timestamp of the start date
+    :type start_date: int
+    :param end_date: Integer/timestamp of the end date
+    :type end_date: int
+
+    :rtype: List[int]
+    """
+    return get_min_in_period(sensor_name=sensor_id, start=datetime.fromtimestamp(start_date), end=datetime.fromtimestamp(end_date))

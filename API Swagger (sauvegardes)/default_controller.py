@@ -1,13 +1,13 @@
 import connexion
 import six
 
-from swagger_server import util
+from TimeSeriesIoT import util
 
 import pymongo
 from bson.json_util import dumps
 from datetime import datetime
 
-def connect_to_collection(address="mongo", port="27017", db="Client2", col="captures"):
+def connect_to_collection(address="172.19.0.3", port="27017", db="Client2", col="captures"):
     myclient = pymongo.MongoClient("mongodb://"+address+":"+port+"/")
     mydb = myclient[db]
     mycol = mydb[col]
@@ -60,8 +60,7 @@ def get_avg_in_period(mycol=connect_to_collection(), sensor_name="Temperature5",
 
     mydoc = mycol.aggregate(pipeline)
 
-    print("Average for sensor "+sensor_name+" between dates "+start_str+" and "+end_str+": \n"+dumps(mydoc, indent=4, sort_keys=True)+"\n\n") 
-    return dumps(mydoc, indent=4, sort_keys=True)
+    return dumps(mydoc)
 
 def get_min_in_period(mycol=connect_to_collection(), sensor_name="Temperature5", start=datetime(2018, 9, 1, 00, 00, 00), end=datetime(2020, 1, 1, 00, 00, 00)):
 
@@ -97,8 +96,15 @@ def get_min_in_period(mycol=connect_to_collection(), sensor_name="Temperature5",
     print("Minimum for sensor "+sensor_name+" between dates "+start_str+" and "+end_str+": \n"+dumps(mydoc, indent=4, sort_keys=True)+"\n\n") 
     return dumps(mydoc, indent=4, sort_keys=True)
 
+def create_indexes(col=connect_to_collection()):
+    resp = col.create_index([ 
+        ("TimestampCapture", -1),
+        ("NomCapteur", -1),
+        ("DateCapture", -1)
+    ])
 
-def mean_sensor_id_get(sensor_id, start_date=None, end_date=None):  # noqa: E501
+
+def mean_sensor_id_get(sensor_id, start_date=1484275868, end_date=1578883868 ):  # noqa: E501
 	"""Calculer la moyenne d&#x27;un capteur entre deux dates
 
 	Optional extended description in CommonMark or HTML. # noqa: E501
@@ -113,4 +119,8 @@ def mean_sensor_id_get(sensor_id, start_date=None, end_date=None):  # noqa: E501
 	:rtype: List[int]
 	"""
 
+	#create_indexes()
+
 	return get_avg_in_period(sensor_name=sensor_id, start=datetime.fromtimestamp(start_date), end=datetime.fromtimestamp(end_date))
+
+# mean_sensor_id_get(sensor_id="Temperature3")
