@@ -36,3 +36,5 @@ Simply launch in terminal "launch_all.sh" shell script that will launch all cont
 Put needed templates into nifi.
 You can find them here:
 https://github.com/Stephane-Bcd/Dev-app-web-service-for-IOT---Fil-rouge/tree/master/nifi/templates
+
+Configure yourself Grafana to have your own panels
