@@ -19,7 +19,7 @@ while true; do
         [Yy]* ) printf "\n\nRemoving all containers\n"
             docker stop $(docker ps -a -q)
             docker rm $(docker ps -a -q); break;;
-        [Nn]* ) exit;;
+        [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
@@ -31,12 +31,12 @@ docker network create iot-labs
 printf "\n\nRelaunching all containers\n"
 docker-compose -f rabbitmq/docker-compose-rabbitmq.yml up -d
 docker-compose -f mongodb/docker-compose-mongodb.yml up -d
-docker-compose -f nifi/docker-compose-nifi.yml up -d
-docker-compose -f nifi/docker-compose-ftp.yml up -d
-docker-compose -f InfluxDB\ Chronograph/docker-compose-chronograph-infuxdb.yml up -d
-docker-compose -f Grafana/docker-compose-grafana.yml up -d
-docker run --rm -v "${PWD}/API Swagger":/local swaggerapi/swagger-codegen-cli-v3:3.0.14 generate -i /local/timeseries_iot.yaml -l python-flask -DpackageName=TimeSeriesIoT -o /local/out/python-ts-iot
-docker-compose -f API\ Swagger/docker-compose.yml up -d
+# docker-compose -f nifi/docker-compose-nifi.yml up -d
+# docker-compose -f nifi/docker-compose-ftp.yml up -d
+# docker-compose -f InfluxDB\ Chronograph/docker-compose-chronograph-infuxdb.yml up -d
+# docker-compose -f Grafana/docker-compose-grafana.yml up -d
+# docker run --rm -v "${PWD}/API Swagger":/local swaggerapi/swagger-codegen-cli-v3:3.0.14 generate -i /local/timeseries_iot.yaml -l python-flask -DpackageName=TimeSeriesIoT -o /local/out/python-ts-iot
+# docker-compose -f API\ Swagger/docker-compose.yml up -d
 
 
 sleep 15s
