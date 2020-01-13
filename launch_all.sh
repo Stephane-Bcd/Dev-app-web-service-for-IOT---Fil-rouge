@@ -34,6 +34,10 @@ docker-compose -f mongodb/docker-compose-mongodb.yml up -d
 docker-compose -f nifi/docker-compose-nifi.yml up -d
 docker-compose -f nifi/docker-compose-ftp.yml up -d
 docker-compose -f InfluxDB\ Chronograph/docker-compose-chronograph-infuxdb.yml up -d
+docker-compose -f Grafana/docker-compose-grafana.yml up -d
+docker run --rm -v "${PWD}/API Swagger":/local swaggerapi/swagger-codegen-cli-v3:3.0.14 generate -i /local/timeseries_iot.yaml -l python-flask -DpackageName=TimeSeriesIoT -o /local/out/python-ts-iot
+docker-compose -f API\ Swagger/docker-compose.yml up -d
+
 
 sleep 15s
 
