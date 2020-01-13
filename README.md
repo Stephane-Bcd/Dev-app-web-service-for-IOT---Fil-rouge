@@ -29,6 +29,8 @@ Mainly used technologies:
 
 in "launch_all.sh", change path to the project root folder
 
+install docker and docker-compose if not already done
+
 Simply launch in terminal "launch_all.sh" shell script that will launch all containers and scripts to load data inside of it as well
 
 Put needed templates into nifi.
